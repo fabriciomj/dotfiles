@@ -1,0 +1,15 @@
+vim.opt.number = true
+vim.opt.mouse = "a"
+vim.opt.clipboard = "unnamedplus"
+vim.opt.expandtab = true
+vim.opt.ignorecase = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.showmode = false
+vim.opt.smartindent = true
+vim.opt.smartcase = true
+vim.opt.wrap = false
+vim.opt.undofile = true
+vim.opt.numberwidth = 2
+vim.opt.splitright = true
+vim.opt.splitbelow = true
