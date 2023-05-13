@@ -63,3 +63,6 @@ window:
 
 scrolling:
   multiplier: 10
+
+key_bindings:
+- { key: F,              mods: Control,            action: ToggleFullscreen      }
