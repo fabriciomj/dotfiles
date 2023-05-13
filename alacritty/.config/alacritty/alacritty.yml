@@ -1,0 +1,65 @@
+# Colors (Base16 Default Dark)
+colors:
+  # Default colors
+  primary:
+    background: '#1A1A1A'
+    foreground: '#C4C5B5'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x181818'
+    cursor: '0xd8d8d8'
+
+  # Normal colors
+  normal:
+    black: '#1A1A1A'
+    red: '#F4005F'
+    green: '#98E024'
+    yellow: '#FA8419'
+    blue: '#9D65FF'
+    magenta: '#F4005F'
+    cyan: '#58D1EB'
+    white: '#C4C5B5'
+
+  # Bright colors
+  bright:
+    black: '#625E4C'
+    red: '#F4005F'
+    green: '#98E024'
+    yellow: '#E0D561'
+    blue: '#9D65FF'
+    magenta: '#F4005F'
+    cyan: '#58D1EB'
+    white: '#F6F6EF'
+
+font:
+  normal:
+    family: Hack Nerd Font
+    style: Regular
+
+  bold:
+    family: Hack Nerd Font
+    style: Bold
+
+  italic:
+    family: Hack Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: Hack Nerd Font
+    style: Bold Italic
+
+  size: 12
+
+draw_bold_text_with_bright_colors: true
+
+window:
+  padding:
+    x: 5
+    y: 5
+
+  dynamic_title: true
+  live_config_reload: true
+
+scrolling:
+  multiplier: 10
