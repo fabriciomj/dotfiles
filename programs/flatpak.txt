@@ -1,52 +1,6 @@
-File Shredder	com.github.ADBeveridge.Raider	1.3.1	stable	system
-PDF Arranger	com.github.jeromerobert.pdfarranger	1.9.2	stable	system
-Logisim Evolution	com.github.reds.LogisimEvolution	3.8.0	stable	system
-Flatseal	com.github.tchx84.Flatseal	1.8.1	stable	system
-Easy Effects	com.github.wwmm.easyeffects	7.0.3	stable	system
-Gerenciador de Extensões	com.mattjakeman.ExtensionManager	0.4.0	stable	system
-Transmission	com.transmissionbt.Transmission	4.0.3	stable	system
-Limpador de metadados	fr.romainvigier.MetadataCleaner	2.5.1	stable	system
-FreeTube	io.freetubeapp.FreeTube	0.18.0 Beta	stable	system
-Celluloid	io.github.celluloid_player.Celluloid	0.25	stable	system
-LibreWolf	io.gitlab.librewolf-community	112.0-1	stable	system
-Piper	org.freedesktop.Piper	0.7	stable	system
-Programa de manipulação de imagem do GNU	org.gimp.GIMP	2.10.34	stable	system
-Calculadora	org.gnome.Calculator	44.0	stable	system
-Visualizador de documentos	org.gnome.Evince	43.1	stable	system
-Editor de Texto	org.gnome.TextEditor	44.0	stable	system
-Visualizador de imagens	org.gnome.eog	44.0	stable	system
-Apóstrofe	org.gnome.gitlab.somas.Apostrophe	2.6.3	stable	system
-LibreOffice	org.libreoffice.LibreOffice	7.5.2.2	stable	system
-Firefox	org.mozilla.firefox	112.0.1	stable	system
-MusicBrainz Picard	org.musicbrainz.Picard	2.8.5	stable	system
-Nicotine+	org.nicotine_plus.Nicotine	3.2.9	stable	system
-File Shredder	com.github.ADBeveridge.Raider	1.3.1	stable	system
-PDF Arranger	com.github.jeromerobert.pdfarranger	1.9.2	stable	system
-Logisim-evolution	com.github.reds.LogisimEvolution	3.8.0	stable	system
-Flatseal	com.github.tchx84.Flatseal	2.0.1	stable	system
-Easy Effects	com.github.wwmm.easyeffects	7.0.4	stable	system
-Gerenciador de Extensões	com.mattjakeman.ExtensionManager	0.4.0	stable	system
-Transmission	com.transmissionbt.Transmission	4.0.3	stable	system
-Limpador de metadados	fr.romainvigier.MetadataCleaner	2.5.2	stable	system
-FreeTube	io.freetubeapp.FreeTube	0.18.0 Beta	stable	system
-Celluloid	io.github.celluloid_player.Celluloid	0.25	stable	system
-LibreWolf	io.gitlab.librewolf-community	112.0.2-1	stable	system
-ProtonUp-Qt	net.davidotek.pupgui2	2.8.0	stable	system
-Lutris	net.lutris.Lutris	0.5.12	stable	system
-Piper	org.freedesktop.Piper	0.7	stable	system
-Programa de manipulação de imagem do GNU	org.gimp.GIMP	2.10.34	stable	system
-Calculadora	org.gnome.Calculator	44.0	stable	system
-Visualizador de documentos	org.gnome.Evince	43.1	stable	system
-Editor de Texto	org.gnome.TextEditor	44.0	stable	system
-Visualizador de imagens	org.gnome.eog	44.1	stable	system
-Apóstrofe	org.gnome.gitlab.somas.Apostrophe	2.6.3	stable	system
-LibreOffice	org.libreoffice.LibreOffice	7.5.3.2	stable	system
-Firefox	org.mozilla.firefox	113.0.1	stable	system
-MusicBrainz Picard	org.musicbrainz.Picard	2.8.5	stable	system
-Nicotine+	org.nicotine_plus.Nicotine	3.2.9	stable	system
 com.github.ADBeveridge.Raider
+com.github.Eloston.UngoogledChromium
 com.github.jeromerobert.pdfarranger
-com.github.reds.LogisimEvolution
 com.github.tchx84.Flatseal
 com.github.wwmm.easyeffects
 com.mattjakeman.ExtensionManager
@@ -55,8 +9,6 @@ fr.romainvigier.MetadataCleaner
 io.freetubeapp.FreeTube
 io.github.celluloid_player.Celluloid
 io.gitlab.librewolf-community
-net.davidotek.pupgui2
-net.lutris.Lutris
 org.freedesktop.Piper
 org.gimp.GIMP
 org.gnome.Calculator
