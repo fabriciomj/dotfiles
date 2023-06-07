@@ -1,6 +1,7 @@
 com.github.ADBeveridge.Raider
 com.github.Eloston.UngoogledChromium
 com.github.jeromerobert.pdfarranger
+com.github.maoschanz.drawing
 com.github.tchx84.Flatseal
 com.github.wwmm.easyeffects
 com.mattjakeman.ExtensionManager
@@ -15,7 +16,6 @@ org.gnome.Calculator
 org.gnome.Evince
 org.gnome.TextEditor
 org.gnome.eog
-org.gnome.gitlab.somas.Apostrophe
 org.libreoffice.LibreOffice
 org.mozilla.firefox
 org.musicbrainz.Picard
