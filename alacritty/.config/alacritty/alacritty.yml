@@ -56,7 +56,7 @@ window:
     x: 5
     y: 5
 
-  decorations: none
+  dynamic_title: false
   live_config_reload: true
 
 scrolling:
