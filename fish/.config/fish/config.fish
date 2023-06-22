@@ -13,3 +13,6 @@ if test -f "/var/home/fabricio/mambaforge/etc/fish/conf.d/mamba.fish"
 end
 # <<< conda initialize <<<
 
+
+# Created by `userpath` on 2023-06-19 18:01:31
+set PATH $PATH /var/home/fabricio/.local/bin
