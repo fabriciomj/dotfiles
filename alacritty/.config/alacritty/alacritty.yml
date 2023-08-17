@@ -1,36 +1,30 @@
-# Colors (Base16 Default Dark)
 colors:
   # Default colors
   primary:
-    background: '#1A1A1A'
-    foreground: '#C4C5B5'
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x181818'
-    cursor: '0xd8d8d8'
+    background: '0x2D2A2E'
+    foreground: '0xfff1f3'
 
   # Normal colors
   normal:
-    black: '#1A1A1A'
-    red: '#F4005F'
-    green: '#98E024'
-    yellow: '#FA8419'
-    blue: '#9D65FF'
-    magenta: '#F4005F'
-    cyan: '#58D1EB'
-    white: '#C4C5B5'
+    black:   '0x2c2525'
+    red:     '0xfd6883'
+    green:   '0xadda78'
+    yellow:  '0xf9cc6c'
+    blue:    '0xf38d70'
+    magenta: '0xa8a9eb'
+    cyan:    '0x85dacc'
+    white:   '0xfff1f3'
 
   # Bright colors
   bright:
-    black: '#625E4C'
-    red: '#F4005F'
-    green: '#98E024'
-    yellow: '#E0D561'
-    blue: '#9D65FF'
-    magenta: '#F4005F'
-    cyan: '#58D1EB'
-    white: '#F6F6EF'
+    black:   '0x72696a'
+    red:     '0xfd6883'
+    green:   '0xadda78'
+    yellow:  '0xf9cc6c'
+    blue:    '0xf38d70'
+    magenta: '0xa8a9eb'
+    cyan:    '0x85dacc'
+    white:   '0xfff1f3'
 
 font:
   normal:
@@ -63,4 +57,4 @@ scrolling:
   multiplier: 10
 
 key_bindings:
-- { key: F,              mods: Control|Alt,            action: ToggleFullscreen      }
+- {key: F, mods: Control|Alt, action: ToggleFullscreen}
