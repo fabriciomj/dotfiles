@@ -1,0 +1,10 @@
+#!/bin/sh
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix ~/.local
+echo "export PATH=$PATH:$HOME/.local/bin" >> $HOME/.bashrc
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/extras/install-podman | sh -s -- --prefix ~/.local
+echo "export PATH=$PATH:$HOME/.local/podman/bin" >> $HOME/.bashrc
+echo "PATH=\"$PATH:$HOME/.local/podman/bin\"" >> $HOME/.distroboxrc
+source $HOME/.bashrc
+source $HOME/.distroboxrc
+distrobox create --yes --no-entry --image registry.fedoraproject.org/fedora-toolbox:latest --name fedora --pre-init-hooks "dnf copr enable atim/lazygit -y" --additional-packages "neovim python3-neovim lsd bat alacritty zsh stow gcc htop lazygit alacritty util-linux-user" --init-hooks "chsh -s /bin/zsh"
+distrobox enter fedora -- distrobox-export --app alacritty
