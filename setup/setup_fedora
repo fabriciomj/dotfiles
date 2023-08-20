@@ -1,0 +1,30 @@
+#!/bin/sh
+# DNF
+echo "Starting DNF setup:\n"
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf groupupdate core
+sudo dnf upgrade -y
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo dnf groupupdate sound-and-video
+sudo dnf copr enable atim/lazygit -y
+sudo dnf install neovim python3-neovim lsd bat alacritty zsh stow gcc htop lazygit util-linux-user calibre adw-gtk3-theme steam-devices
+sudo dnf remove firefox
+chsh -s /usr/bin/zsh
+
+# Dotfiles
+echo "Starting dotfiles setup:\n"
+cd ~/.dotfiles
+stow */
+
+# Flatpak
+echo "Starting Flatpak setup:\n"
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1 )
+flatpak remote-delete fedora
+flatpak install org.mozilla.firefox org.libreoffice.LibreOffice org.gimp.GIMP it.mijorus.gearlever io.gitlab.librewolf-community io.github.celluloid_player.Celluloid io.freetubeapp.FreeTube com.valvesoftware.Steam com.mattjakeman.ExtensionManager com.github.tchx84.Flatseal com.github.Eloston.UngoogledChromium com.github.wwmm.easyeffects org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
+gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+sudo flatpak override --filesystem=xdg-config/gtk-3.0
+sudo flatpak override --filesystem=xdg-config/gtk-4.0
+
+systemctl reboot
