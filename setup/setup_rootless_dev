@@ -3,4 +3,4 @@ chmod +x ./install_distrobox ./install_sdkman ./install_fonts
 ./install_distrobox
 ./install_sdkman
 ./install_fonts
-stow nvim alacritty zsh
+distrobox enter fedora -- stow nvim alacritty zsh

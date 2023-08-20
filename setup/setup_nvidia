@@ -1,3 +1,4 @@
 #!/bin/sh
 sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda nvidia-vaapi-driver libva-utils vdpauinfo
 echo "Installed NVIDIA Packages"
+systemctl reboot
