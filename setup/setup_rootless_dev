@@ -1,6 +1,6 @@
 #!/bin/sh
-chmod +x ./install_distrobox ./install_sdkman ./install_fonts
-./install_distrobox
-./install_sdkman
-./install_fonts
+chmod +x ./setup_distrobox ./setup_sdkman ./setup_fonts
+./setup_distrobox
+./setup_sdkman
+./setup_fonts
 distrobox enter fedora -- stow nvim alacritty zsh
