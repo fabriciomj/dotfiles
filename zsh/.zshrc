@@ -61,6 +61,7 @@ path=(~/bin $path)
 # Export environment variables.
 export GPG_TTY=$TTY
 export EDITOR="nvim"
+export PATH="/home/fabricio/.local/bin:$PATH"
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
@@ -84,6 +85,8 @@ z4h bindkey z4h-cd-up      Alt+Up     # cd into the parent directory
 z4h bindkey z4h-cd-down    Alt+Down   # cd into a child directory
 
 # Autoload functions.
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
 autoload -Uz zmv
 
 # Define functions and completions.
