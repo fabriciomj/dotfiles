@@ -1,6 +1,5 @@
 #!/bin/sh
 # DNF
-echo "Starting DNF setup:\n"
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf groupupdate core -y
 sudo dnf upgrade -y
@@ -14,14 +13,12 @@ sudo dnf groupinstall "C Development Tools and Libraries" -y
 chsh -s /usr/bin/zsh
 
 # Dotfiles
-echo "Starting dotfiles setup:\n"
 git clone https://github.com/Stargazer3240/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 rm .git -rf
 stow git alacritty zsh
 
 # Flatpak
-echo "Starting Flatpak setup:\n"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1 )
 flatpak remote-delete fedora
