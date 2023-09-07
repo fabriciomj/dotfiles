@@ -19,10 +19,10 @@ rm .git -rf
 stow git alacritty zsh
 
 # Flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1 )
-flatpak remote-delete fedora
-flatpak uninstall --unused --delete-data
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo -y
+flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1 ) -y
+flatpak remote-delete fedora -y
+flatpak uninstall --unused --delete-data -y
 flatpak install \
 	org.mozilla.firefox \
 	org.libreoffice.LibreOffice \
@@ -36,5 +36,17 @@ flatpak install \
 	com.github.Eloston.UngoogledChromium \
 	com.github.wwmm.easyeffects \
 	gg.minion.Minion \
+	-y \
+
+
+# zram
+echo "[zram0]
+zram-size = ram * 2
+compression-algorithm = zstd" | sudo tee /usr/lib/systemd/zram-generator.conf
+sudo systemctl daemon-reload
+sudo systemctl restart systemd-zram-setup@zram0.service
+
+# Gnome
+gsettings set org.gnome.mutter check-alive-timeout 60000
 
 systemctl reboot
