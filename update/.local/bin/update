@@ -2,7 +2,7 @@
 BCYAN="\033[36;1m"
 NC="\033[0m"
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-printf "\n${BCYAN}Running dnf commands:\n${NC}"
+printf "${BCYAN}Running dnf commands:\n${NC}"
 sudo dnf upgrade -y
 sudo dnf autoremove -y
 printf "\n\n${BCYAN}Running flatpak commands:\n${NC}"
@@ -10,9 +10,8 @@ flatpak upgrade -y
 flatpak uninstall --unused --delete-data
 printf "${BCYAN}Running dev env commands:\n${NC}"
 sdk update
-poetry self update
-# rustup update
-distrobox upgrade --all
+sdk self update
+poetry selfupdate
 nvim --headless -c 'Lazy sync' -c 'Mason' -c 'MasonUpdate' -c 'quit' -c 'quit'
 printf "\n${BCYAN}Running firmware commands:\n${NC}"
 fwupdmgr refresh
