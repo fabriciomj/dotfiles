@@ -11,7 +11,7 @@ flatpak uninstall --unused --delete-data
 printf "${BCYAN}Running dev env commands:\n${NC}"
 sdk update
 poetry self update
-rustup update
+# rustup update
 distrobox upgrade --all
 nvim --headless -c 'Lazy sync' -c 'Mason' -c 'MasonUpdate' -c 'quit' -c 'quit'
 printf "\n${BCYAN}Running firmware commands:\n${NC}"
