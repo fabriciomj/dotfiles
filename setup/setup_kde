@@ -1,2 +1,5 @@
 #!/bin/sh
 sudo dnf remove kontact dnfdragora kmail akregator konversation kmines kmahjongg dragonplayer kamoso kaddressbook korganizer krdc krfb kde-connect elisa-player kpat firewall-config kcharselect kmouth kmousetool kfind kmag
+sudo dnf install pinentry-gnome3 ksshaskpass
+
+echo "pinentry-program /usr/bin/pinentry-gnome3" | tee ~/.gnupg/gpg-agent.conf
