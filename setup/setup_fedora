@@ -6,36 +6,35 @@ sudo dnf upgrade -y
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
 sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
 sudo dnf groupupdate sound-and-video -y
-sudo dnf install neovim python3-neovim lsd bat gnome-tweaks alacritty zsh stow htop util-linux-user steam-devices f36-backgrounds-gnome gnome-shell-extension-no-overview gnome-shell-extension-appindicator -y
-sudo dnf remove firefox "libreoffice*" gnome-maps gnome-logs gnome-font-viewer gnome-photos gnome-tour gnome-weather gnome-calendar gnome-characters gnome-clocks gnome-contacts totem cheese simple-scan gnome-abrt rhythmbox gnome-connections -y
+sudo dnf install neovim python3-neovim lsd bat alacritty zsh stow htop util-linux-user steam-devices -y
+sudo dnf remove firefox -y
+sudo dnf group remove LibreOffice -y
 sudo rm /usr/share/applications/nvim.desktop /usr/share/applications/htop.desktop
 sudo dnf groupinstall "C Development Tools and Libraries" -y
-chsh -s /usr/bin/zsh
 
 # Dotfiles
-git clone https://github.com/Stargazer3240/dotfiles.git ~/.dotfiles
+git clone git@github.com:Stargazer3240/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-rm .git -rf
 stow git alacritty zsh
 
+git clone git@github.com:Stargazer3240/neovim-config.git ~/.config/nvim
+
 # Flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo -y
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1 ) -y
-flatpak remote-delete fedora -y
+flatpak remote-delete fedora
 flatpak uninstall --unused --delete-data -y
 flatpak install \
 	org.mozilla.firefox \
 	org.libreoffice.LibreOffice \
 	org.gimp.GIMP \
 	it.mijorus.gearlever \
-	io.gitlab.librewolf-community \
 	io.github.celluloid_player.Celluloid \
 	io.freetubeapp.FreeTube \
 	com.valvesoftware.Steam \
 	com.github.tchx84.Flatseal \
 	com.github.Eloston.UngoogledChromium \
 	com.github.wwmm.easyeffects \
-	gg.minion.Minion \
 	-y \
 
 
@@ -46,7 +45,6 @@ compression-algorithm = zstd" | sudo tee /usr/lib/systemd/zram-generator.conf
 sudo systemctl daemon-reload
 sudo systemctl restart systemd-zram-setup@zram0.service
 
-# Gnome
-gsettings set org.gnome.mutter check-alive-timeout 60000
+chsh -s /usr/bin/zsh
 
 systemctl reboot

@@ -6,7 +6,7 @@
   ui = true
   pager = true
 [user]
-	signingkey = 8884F007ADC37F3A
+	signingkey = 30435CB270F8288E
 	email = 112516550+Stargazer3240@users.noreply.github.com
 	name = Stargazer3240
 [commit]
