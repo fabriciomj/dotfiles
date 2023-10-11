@@ -58,3 +58,6 @@ scrolling:
 
 key_bindings:
 - {key: F, mods: Control|Alt, action: ToggleFullscreen}
+
+shell:
+  program: /usr/bin/zsh

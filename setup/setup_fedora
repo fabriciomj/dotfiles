@@ -6,7 +6,7 @@ sudo dnf upgrade -y
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
 sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
 sudo dnf groupupdate sound-and-video -y
-sudo dnf install neovim python3-neovim lsd bat alacritty zsh stow htop util-linux-user steam-devices -y
+sudo dnf install neovim python3-neovim lsd bat alacritty zsh stow htop steam-devices -y
 sudo dnf remove firefox -y
 sudo dnf group remove LibreOffice -y
 sudo rm /usr/share/applications/nvim.desktop /usr/share/applications/htop.desktop
@@ -44,7 +44,5 @@ zram-size = ram * 2
 compression-algorithm = zstd" | sudo tee /usr/lib/systemd/zram-generator.conf
 sudo systemctl daemon-reload
 sudo systemctl restart systemd-zram-setup@zram0.service
-
-chsh -s /usr/bin/zsh
 
 systemctl reboot
