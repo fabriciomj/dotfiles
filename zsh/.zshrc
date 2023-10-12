@@ -62,9 +62,10 @@ path=(~/bin $path)
 export GPG_TTY=$TTY
 export EDITOR="nvim"
 export PATH="/home/fabricio/.local/bin:$PATH"
+export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 
 # Source additional local files if they exist.
-z4h source ~/.env.zsh
+z4h source ~/.env.zsh /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 
 # Use additional Git repositories pulled in with `z4h install`.
 #
@@ -109,7 +110,3 @@ command -v bat > /dev/null && alias less='bat'
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

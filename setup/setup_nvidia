@@ -1,3 +1,0 @@
-#!/bin/sh
-sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda nvidia-vaapi-driver libva-utils vdpauinfo
-systemctl reboot

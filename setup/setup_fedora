@@ -1,42 +1,13 @@
 #!/bin/sh
 # DNF
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf groupupdate core -y
-sudo dnf upgrade -y
-sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
-sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
-sudo dnf groupupdate sound-and-video -y
-sudo dnf install neovim python3-neovim lsd bat alacritty zsh stow htop steam-devices -y
-sudo dnf remove firefox -y
+sudo dnf install alacritty zsh steam-devices -y
+sudo dnf remove firefox "libreoffice*" -y
 sudo dnf group remove LibreOffice -y
-sudo rm /usr/share/applications/nvim.desktop /usr/share/applications/htop.desktop
-sudo dnf groupinstall "C Development Tools and Libraries" -y
 
-# Dotfiles
-git clone git@github.com:Stargazer3240/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-stow git alacritty zsh
-
-git clone git@github.com:Stargazer3240/neovim-config.git ~/.config/nvim
-
-# Flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1 ) -y
-flatpak remote-delete fedora
-flatpak uninstall --unused --delete-data -y
-flatpak install \
-	org.mozilla.firefox \
-	org.libreoffice.LibreOffice \
-	org.gimp.GIMP \
-	it.mijorus.gearlever \
-	io.github.celluloid_player.Celluloid \
-	io.freetubeapp.FreeTube \
-	com.valvesoftware.Steam \
-	com.github.tchx84.Flatseal \
-	com.github.Eloston.UngoogledChromium \
-	com.github.wwmm.easyeffects \
-	-y \
-
+# Gnome
+sudo dnf install gnome-tweaks gnome-shell-extension-no-overview gnome-shell-extension-appindicator -y
+sudo dnf remove gnome-maps gnome-logs gnome-font-viewer gnome-photos gnome-tour gnome-weather gnome-calendar gnome-characters gnome-clocks gnome-contacts totem cheese simple-scan gnome-abrt rhythmbox gnome-connections -y
+gsettings set org.gnome.mutter check-alive-timeout 60000
 
 # zram
 echo "[zram0]
@@ -44,5 +15,3 @@ zram-size = ram * 2
 compression-algorithm = zstd" | sudo tee /usr/lib/systemd/zram-generator.conf
 sudo systemctl daemon-reload
 sudo systemctl restart systemd-zram-setup@zram0.service
-
-systemctl reboot
