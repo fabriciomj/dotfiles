@@ -65,7 +65,7 @@ export PATH="/home/fabricio/.local/bin:$PATH"
 export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 
 # Source additional local files if they exist.
-z4h source ~/.env.zsh /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+z4h source ~/.env.zsh /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
 
 # Use additional Git repositories pulled in with `z4h install`.
 #
