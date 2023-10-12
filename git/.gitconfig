@@ -1,10 +1,3 @@
-[color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
-  ui = true
-  pager = true
 [user]
 	signingkey = 3CB29D135A367559
 	email = 112516550+Stargazer3240@users.noreply.github.com
