@@ -64,7 +64,7 @@ export EDITOR="nvim"
 export PATH="/home/fabricio/.local/bin:$PATH"
 
 # Source additional local files if they exist.
-z4h source ~/.env.zsh
+z4h source ~/.env.zsh /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 
 # Use additional Git repositories pulled in with `z4h install`.
 #
