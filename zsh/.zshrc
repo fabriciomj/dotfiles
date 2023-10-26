@@ -61,11 +61,10 @@ path=(~/bin $path)
 # Export environment variables.
 export GPG_TTY=$TTY
 export EDITOR="nvim"
-export PATH="/home/fabricio/.local/bin:$PATH"
+export PATH="$PATH"
 
 # Source additional local files if they exist.
-z4h source ~/.env.zsh /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-
+z4h source ~/.env.zsh
 # Use additional Git repositories pulled in with `z4h install`.
 #
 # This is just an example that you should delete. It does nothing useful.
@@ -99,7 +98,6 @@ compdef _directories md
 # Define aliases.
 command -v lsd > /dev/null && alias ls='lsd --group-dirs first'
 command -v lsd > /dev/null && alias tree='lsd --tree'
-command -v htop > /dev/null && alias top='htop'
 command -v bat > /dev/null && alias cat='bat --pager=never'
 command -v bat > /dev/null && alias less='bat'
 
