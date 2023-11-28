@@ -56,13 +56,12 @@ zstyle ':z4h:ssh:*' send-extra-files '~/.nanorc' '~/.env.zsh'
 z4h init || return
 
 # Extend PATH.
-path=("$HOME/.gems/bin" "$HOME/bin" $path)
+path=("$HOME/bin" $path)
 
 # Export environment variables.
 export GPG_TTY=$TTY
 export EDITOR="nvim"
 export PATH="$PATH"
-export GEM_HOME="$HOME/.gems"
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
@@ -102,6 +101,10 @@ command -v lsd > /dev/null && alias tree='lsd --tree'
 command -v bat > /dev/null && alias cat='bat --pager=never'
 command -v bat > /dev/null && alias less='bat'
 command -v firefox > /dev/null && alias firefox="env LIBVA_DRIVER_NAME=nvidia MOZ_DISABLE_RDD_SANDBOX=1 NVD_BACKEND=direct firefox"
+alias gts="git status"
+alias gta="git add -A"
+alias gtp="git push"
+alias gtm="git commit -m"
 
 # Add flags to existing aliases.
 # alias ls="${aliases[ls]:-ls} -A"
