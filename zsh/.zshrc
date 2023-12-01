@@ -103,8 +103,12 @@ command -v bat > /dev/null && alias less='bat'
 command -v firefox > /dev/null && alias firefox="env LIBVA_DRIVER_NAME=nvidia MOZ_DISABLE_RDD_SANDBOX=1 NVD_BACKEND=direct firefox"
 alias gts="git status"
 alias gta="git add -A"
-alias gtp="git push"
-alias gtm="git commit -m"
+alias gtps="git push"
+alias gtf="git fetch"
+alias gtpl="git pull"
+alias gtc="git commit -m"
+alias gtd="git diff"
+alias pya="source ./.venv/bin/activate"
 
 # Add flags to existing aliases.
 # alias ls="${aliases[ls]:-ls} -A"
