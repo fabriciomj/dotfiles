@@ -100,7 +100,6 @@ command -v lsd > /dev/null && alias ls='lsd --group-dirs first'
 command -v lsd > /dev/null && alias tree='lsd --tree'
 command -v bat > /dev/null && alias cat='bat --pager=never'
 command -v bat > /dev/null && alias less='bat'
-command -v firefox > /dev/null && alias firefox="env LIBVA_DRIVER_NAME=nvidia MOZ_DISABLE_RDD_SANDBOX=1 NVD_BACKEND=direct firefox"
 alias gts="git status"
 alias gta="git add -A"
 alias gtps="git push"
@@ -109,6 +108,7 @@ alias gtpl="git pull"
 alias gtc="git commit -m"
 alias gtd="git diff"
 alias pya="source ./.venv/bin/activate"
+alias syr="systemctl reboot"
 
 # Add flags to existing aliases.
 # alias ls="${aliases[ls]:-ls} -A"
