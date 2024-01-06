@@ -56,5 +56,8 @@ window:
 scrolling:
   multiplier: 10
 
+shell:
+  program: "/bin/zsh"
+
 key_bindings:
 - {key: F, mods: Control|Alt, action: ToggleFullscreen}
