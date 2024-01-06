@@ -107,6 +107,8 @@ alias gtf="git fetch"
 alias gtpl="git pull"
 alias gtc="git commit -m"
 alias gtd="git diff"
+alias gtds="gtd --staged"
+alias gtl="git log"
 alias pya="source ./.venv/bin/activate"
 alias syr="systemctl reboot"
 
