@@ -62,6 +62,9 @@ path=("$HOME/bin" $path)
 export GPG_TTY=$TTY
 export EDITOR="nvim"
 export PATH="$PATH"
+if [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
+  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
+fi
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
