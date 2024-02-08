@@ -114,6 +114,7 @@ alias gtds="gtd --staged"
 alias gtl="git log"
 alias pya="source ./.venv/bin/activate"
 alias syr="systemctl reboot"
+alias syp="systemctl poweroff"
 
 # Add flags to existing aliases.
 # alias ls="${aliases[ls]:-ls} -A"
