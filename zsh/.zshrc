@@ -115,6 +115,7 @@ alias gtl="git log"
 alias pya="source ./.venv/bin/activate"
 alias syr="systemctl reboot"
 alias syp="systemctl poweroff"
+alias fdg="fd ".git" -g -t d -u -E lazy"
 
 # Add flags to existing aliases.
 # alias ls="${aliases[ls]:-ls} -A"
