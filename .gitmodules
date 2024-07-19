@@ -1,0 +1,3 @@
+[submodule "lazyvim-config"]
+	path = nvim/.config/nvim
+	url = git@github.com:stargazer3240/lazyvim-config.git
