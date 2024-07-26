@@ -21,3 +21,4 @@ abbr -a -- gtps 'git push'
 abbr -a -- gts 'git status'
 abbr -a -- gtaa 'git add -A'
 abbr -a -- gta 'git add'
+fish_add_path "~/.local/bin/"
