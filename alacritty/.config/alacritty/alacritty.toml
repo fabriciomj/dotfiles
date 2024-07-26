@@ -61,12 +61,5 @@ mods = "Control|Alt"
 [scrolling]
 multiplier = 10
 
-[shell]
-program = "/bin/fish"
-
 [window]
 dynamic_title = false
-
-[window.padding]
-x = 5
-y = 5
