@@ -8,3 +8,8 @@
 	defaultBranch = main
 [color]
 	ui = auto
+[core]
+  editor = nvim
+[alias]
+   last = log -1 HEAD
+   part = add --patch
