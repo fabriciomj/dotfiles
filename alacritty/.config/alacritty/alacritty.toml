@@ -61,5 +61,8 @@ mods = "Control|Alt"
 [scrolling]
 multiplier = 10
 
+[terminal.shell]
+program = "/usr/bin/fish"
+
 [window]
 dynamic_title = false
