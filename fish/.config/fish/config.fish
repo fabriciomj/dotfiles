@@ -23,7 +23,4 @@ abbr -a -- gtaa 'git add -A'
 abbr -a -- gta 'git add'
 fish_add_path "~/.local/bin/" "~/.elan/bin/"
 
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
-set -gx PATH $HOME/.cabal/bin /home/fabricio/.ghcup/bin $PATH # ghcup-env
-
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
