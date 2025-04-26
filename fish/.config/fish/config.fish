@@ -23,4 +23,6 @@ abbr -a -- gtaa 'git add -A'
 abbr -a -- gta 'git add'
 fish_add_path "~/.local/bin/" "~/.elan/bin/"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if test -d /home/linuxbrew/.linuxbrew
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+end
