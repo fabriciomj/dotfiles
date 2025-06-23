@@ -21,7 +21,7 @@ abbr -a -- gtps 'git push'
 abbr -a -- gts 'git status'
 abbr -a -- gtaa 'git add -A'
 abbr -a -- gta 'git add'
-fish_add_path "~/.local/bin/" "~/.elan/bin/"
+fish_add_path "~/.local/bin/" "~/.elan/bin/" "$HOME/.cabal/bin" "$HOME/.ghcup/bin"
 
 if test -d /home/linuxbrew/.linuxbrew
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
