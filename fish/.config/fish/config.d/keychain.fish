@@ -1,4 +1,5 @@
 if status is-login
     and status is-interactive
-    keychain --eval id_ed25519 | source
+    and set -q WSL_DISTRO_NAME
+    keychain --eval /home/fabricio/.ssh/id_ed25519 | source
 end

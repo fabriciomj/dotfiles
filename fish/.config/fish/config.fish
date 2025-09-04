@@ -1,5 +1,7 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+	if set -q WSL_DISTRO_NAME
+	export GPG_TTY=$(tty)
+	end	
 end
 abbr -a -- dea deactivate
 abbr -a -- pya 'source .venv/bin/activate.fish'
@@ -21,6 +23,7 @@ abbr -a -- gtps 'git push'
 abbr -a -- gts 'git status'
 abbr -a -- gtaa 'git add -A'
 abbr -a -- gta 'git add'
+set -g fish_greeting
 fish_add_path "~/.local/bin/" "~/.elan/bin/" "$HOME/.cabal/bin" "$HOME/.ghcup/bin"
 
 if test -d /home/linuxbrew/.linuxbrew
