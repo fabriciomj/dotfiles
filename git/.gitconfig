@@ -1,6 +1,6 @@
 [user]
 	signingkey = 3CB29D135A367559
-	email = 112516550+Stargazer3240@users.noreply.github.com
+	email = 112516550+fabriciomj@users.noreply.github.com
 	name = Stargazer3240
 [commit]
 	gpgsign = true
@@ -10,6 +10,3 @@
 	ui = auto
 [core]
   editor = nvim
-[alias]
-   last = log -1 HEAD
-   part = add --patch
