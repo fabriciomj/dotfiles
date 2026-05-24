@@ -10,9 +10,11 @@
   	gpgSign = true
 [credential]
 	helper = manager
-{{- if mustRegexMatch "microsoft|WSL" .chezmoi.kernel.osrelease }}
+{{ if eq .chezmoi.os "linux" }}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 [gpg]
 	program = /mnt/c/Program Files/Git/usr/bin/gpg.exe
 [core]
 	sshCommand = /mnt/c/Windows/System32/OpenSSH/ssh.exe
-{{- end }}
+{{   end }}
+{{ end }}
