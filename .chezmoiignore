@@ -1,0 +1,5 @@
+{{- if ne .chezmoi.os "linux" }}
+config.fish
+kanagawa.fish
+executable_update
+{{- end}}
