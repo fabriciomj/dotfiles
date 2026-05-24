@@ -1,0 +1,16 @@
+[user]
+  	signingkey = 3CB29D135A367559
+  	email = 112516550+fabriciomj@users.noreply.github.com
+  	name = Fabricio Jacome
+[commit]
+  	gpgsign = true
+[init]
+  	defaultBranch = main
+[core]
+	sshCommand = /mnt/c/Windows/System32/OpenSSH/ssh.exe
+[tag]
+  	gpgSign = true
+[credential]
+	helper = manager
+[gpg]
+	program = /mnt/c/Program Files/Git/usr/bin/gpg.exe
