@@ -10,7 +10,7 @@
   	gpgSign = true
 [credential]
 	helper = manager
-{{- if eq .chezmoi.os "work-laptop" }}
+{{- if mustRegexMatch "microsoft|WSL" .chezmoi.kernel.osrelease }}
 [gpg]
 	program = /mnt/c/Program Files/Git/usr/bin/gpg.exe
 [core]
