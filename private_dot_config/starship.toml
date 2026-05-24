@@ -5,7 +5,6 @@ format = """$directory$git_branch$git_status$line_break$character"""
 [directory]
 style = "bold cyan"
 format = "[$path]($style) "
-truncation_length = 3
 truncate_to_repo = false
 
 [git_branch]
