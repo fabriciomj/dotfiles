@@ -1,0 +1,32 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """$directory$git_branch$git_status$line_break$character"""
+
+[directory]
+style = "bold cyan"
+format = "[$path]($style) "
+truncate_to_repo = false
+
+[git_branch]
+symbol = ""
+style = "bold green"
+format = "[$branch]($style) "
+
+[git_status]
+style = "bold yellow"
+format = "([$all_status$ahead_behind]($style))"
+conflicted = "~${count}"
+staged = "+${count}"
+modified = "!${count}"
+untracked = "?${count}" 
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = '⇡${ahead_count}⇣${behind_count}'
+renamed = "»${count}"
+deleted = ""
+stashed = "*"
+windows_starship = '/mnt/c/Users/Fabricio/AppData/Local/Microsoft/WinGet/Packages/Starship.Starship_Microsoft.Winget.Source_8wekyb3d8bbwe/starship.exe'
+
+[character]
+success_symbol = "[❯](bold green)" 
+error_symbol = "[❯](bold red)"
