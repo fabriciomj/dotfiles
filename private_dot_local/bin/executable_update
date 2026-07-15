@@ -18,7 +18,7 @@ fi
 if [ -e "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
   echo -e "${F_BOLD}${C_TEAL}Updating brew:${NO_FORMAT}"
   brew update
-  brew upgrade
+  brew upgrade -y
 fi
 
 if [[ $(command -v flatpak) ]]; then
