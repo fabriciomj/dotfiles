@@ -8,13 +8,12 @@
   	defaultBranch = main
 [tag]
   	gpgSign = true
-[credential]
-	helper = manager
 {{ if eq .chezmoi.os "linux" }}
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 [gpg]
 	program = gpg.exe
 [core]
 	sshCommand = ssh.exe
+	autocrlf = input
 {{   end }}
 {{ end }}
